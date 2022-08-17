@@ -1,0 +1,33 @@
+<!-- Please add these links in the header tag  -->
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- Acutal Content in html form->
+<div id="mycontent">
+..... There is your actual data............
+</div>
+
+
+
+<!-- Screenshot of Actual content will appear here -->
+<div>
+        <h1>My Screenshot here</h1>
+        <div id="myimage">
+
+        </div>
+    </div>
+
+
+<!-- javascript code -->
+    <script>
+        function screenshot(){
+            var content = document.getElementById("mycontent");
+            html2canvas(content).then(
+                function(canvas){
+                   document.getElementById("myimage").appendChild(canvas);
+                }
+            )
+        }
+    </script>
